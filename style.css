@@ -1,0 +1,89 @@
+html,
+body {
+    height: 100%;
+}
+
+.custom-swap-icon {
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .custom-swap-icon {
+        transform: rotate(90deg);
+    }
+}
+
+#outputTextContainer::-webkit-scrollbar,
+#inputText::-webkit-scrollbar {
+    width: 8px;
+}
+
+#outputTextContainer::-webkit-scrollbar-track,
+#inputText::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#outputTextContainer::-webkit-scrollbar-thumb,
+#inputText::-webkit-scrollbar-thumb {
+    background-color: #3f3f46;
+    border-radius: 20px;
+}
+
+#outputTextContainer::-webkit-scrollbar-thumb:hover,
+#inputText::-webkit-scrollbar-thumb:hover {
+    background-color: #52525b;
+}
+
+#inputText::selection,
+#outputTextContainer::selection {
+    background-color: rgba(249, 115, 22, 0.35);
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.15s ease;
+}
+
+.action-btn:active {
+    transform: scale(0.98);
+}
+
+.action-btn-primary {
+    background: linear-gradient(to right, #f97316, #f59e0b);
+    color: #09090b;
+    box-shadow: 0 4px 14px rgba(124, 45, 18, 0.35);
+}
+
+.action-btn-primary:hover:not(:disabled) {
+    background: linear-gradient(to right, #ea580c, #d97706);
+}
+
+.action-btn-secondary {
+    background: #27272a;
+    color: #d4d4d8;
+    border: 1px solid #3f3f46;
+}
+
+.action-btn-secondary:hover:not(:disabled) {
+    background: #3f3f46;
+    color: #fb923c;
+}
+
+.action-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.action-btn-primary:disabled {
+    background: #3f3f46;
+    color: #71717a;
+    box-shadow: none;
+}
